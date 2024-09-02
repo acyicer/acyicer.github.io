@@ -8,8 +8,8 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/main/my.ico">
+  <link rel="icon" href="/img/main/my.ico">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://acyicer.github.io/2024/07/24/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/quick_sort_overview.png">
 <meta property="article:published_time" content="2024-07-24T12:54:07.000Z">
-<meta property="article:modified_time" content="2024-08-24T16:01:17.549Z">
+<meta property="article:modified_time" content="2024-09-02T14:25:55.756Z">
 <meta property="article:author" content="Acy Ice">
 <meta property="article:tag" content="算法章节">
 <meta name="twitter:card" content="summary_large_image">
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          930 字
+          929 字
         
       </span>
     
@@ -291,7 +291,7 @@
 <p>哨兵划分就是将一个数组中的元素划分为两块</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">1</span>，<span class="hljs-number">0</span>，<span class="hljs-number">2</span>，<span class="hljs-number">4</span>，<span class="hljs-number">3</span>，<span class="hljs-number">5</span><br><span class="hljs-attribute">2</span>左边是小于<span class="hljs-number">2</span>的数字，<span class="hljs-number">2</span>右边是大于等于<span class="hljs-number">2</span>的数字<br></code></pre></td></tr></table></figure>
 
-<p>我们都知道快排的平均复杂度是*O(nlogn)<em>，最差时间复杂度</em>O(n²)*，那么什么时候快排时间复杂度是最差呢，我们看下面一种</p>
+<p>我们都知道快排的平均复杂度是O(nlogn)，最差时间复杂度O(n²)，那么什么时候快排时间复杂度是最差呢，我们看下面一种</p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dns">原始数组：<span class="hljs-number">1，2，3，4</span>，<span class="hljs-number">5</span><br>第一次划分后：<span class="hljs-number">1，2，3，4</span>  | <span class="hljs-number">5</span><br>假设每次选取的哨兵都是最右边的数字，那么按照快排算法的迭代，每次都只能划分出来一个元素，这样相当于退化成一个链表每次只取一个元素<br>这种情况的时间复杂度是O(n²)<br></code></pre></td></tr></table></figure>
 
 <h3 id="优化1"><a href="#优化1" class="headerlink" title="优化1"></a>优化1</h3><p>如何优化呢，我们发现导致这种情况的出现是哨兵的选取，尽可能不要让它取到数组的边界，因此我们采取的方法是随机选取数组中的元素，尽量选取到一个中间元素，每次划分将数组拆分成长度相同的两半，这样就能尽可能减少上面情况的出现</p>
@@ -387,6 +387,12 @@
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2024/07/20/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" title="归并排序算法">
+                        <span class="hidden-mobile">归并排序算法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
